@@ -9,7 +9,7 @@
             xhr.onload = function () {
                 if (xhr.status === 200) {
                     // 요청이 성공하면 이미지를 다시 불러옵니다.
-                    document.getElementById("video_feed").src = "http://202.31.150.186:8765/video_feed";
+                    document.getElementById("video_feed").src = "http://yourip:8765/video_feed";
                     // 새로운 데이터를 표시하기 위해 페이지를 새로고침합니다.
                     location.reload();
                 } else {
@@ -37,7 +37,7 @@
 </head>
 <body>
     <h1>Video Streaming with Capture</h1>
-    <img id="video_feed" src="http://202.31.150.186:8765/video_feed" alt="Video Feed">
+    <img id="video_feed" src="http://yourip:8765/video_feed" alt="Video Feed">
     <br>
     <button onclick="captureFrame()">Capture Frame</button>
 
