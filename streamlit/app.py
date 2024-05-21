@@ -32,7 +32,7 @@ def delete_data_from_db(id):
 
 # �̹����� �����?������ ���ڵ� �� ǥ��
 def capture_frame():
-    url = "http://202.31.150.186:8765/video_feed"
+    url = "http://yourip:8765/video_feed"
     response = requests.get(url)
     if response.status_code == 204:
         return Image.open(io.BytesIO(response.content))
@@ -43,7 +43,7 @@ def capture_frame():
 st.title("Video Streaming with Capture")
 
 # ���� �ǵ� ǥ��
-st.image("http://202.31.150.186:8765/video_feed", caption="Video Feed")
+st.image("http://yourip:8765/video_feed", caption="Video Feed")
 
 if st.button('Capture Frame'):
     response = requests.post('http://192.168.0.19:8765/capture')
